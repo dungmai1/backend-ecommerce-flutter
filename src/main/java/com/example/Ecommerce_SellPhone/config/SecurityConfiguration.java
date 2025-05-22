@@ -37,7 +37,7 @@ public class SecurityConfiguration {
                 .requestMatchers("/admin/featured/**").hasRole("ADMIN")
                 .requestMatchers("/admin/customer/**").hasRole("ADMIN")
                 .requestMatchers("/admin/order/**").hasRole("ADMIN")
-                .requestMatchers("/product/**","/swagger-ui*/**","/","/v3/api-docs/**","/category/**","/featured/**","/provider/**").permitAll()
+                .requestMatchers("/product/**","/swagger-ui*/**","/","/v3/api-docs/**","/category/**","/featured/**","/provider/**", "/email/**").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
